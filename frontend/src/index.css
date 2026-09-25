@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy-900: #071a35;
+  --navy-800: #102a52;
+  --navy-700: #183a68;
+  --gold-500: #d6b46a;
+  --gold-600: #b88a3d;
+  --ivory-50: #fbf8f2;
+  --ivory-100: #f4efe6;
+  --stone-500: #6f7886;
+  --text: #1a2434;
+  --shadow-soft: 0 24px 60px rgba(7, 26, 53, 0.12);
+  font-size: 16px;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory-50);
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+p, li, span, strong, small, button, input, textarea { line-height: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+/* Keep compact labels readable across every route and shared component. */
+.utility-inner {
+  font-size: 12px;
+}
+
+.header-contact span {
+  font-size: 11px;
+}
+
+.nav-link,
+.dropdown-panel a {
+  font-size: 13px;
+}
+
+.template-eyebrow {
+  font-size: 15px !important;
+}
+
+.template-text {
+  font-size: 17px !important;
+}
+
+.page-template,
+.page-template p,
+.page-template li,
+.page-template a,
+.page-template button {
+  font-size: 17px;
+}
+
+.footer-heading,
+.footer-sub,
+.footer-bottom {
+  font-size: 13px;
+}
+
+.about-image-index,
+.about-heritage-card span:last-child,
+.about-image-label,
+.difference-eyebrow,
+.difference-card-label,
+.hero-eyebrow,
+.hero-meta-label,
+.programs-eyebrow,
+.principal-eyebrow,
+.stats-label {
+  font-size: 12px;
+}
+
+/* Site-wide readable text baseline. Component-specific small labels cannot override this. */
+p,
+li,
+a,
+button,
+input,
+textarea,
+select,
+label {
+  font-size: 16px !important;
+}
+
+small {
+  font-size: 14px !important;
+}
+
+.utility-inner,
+.header-contact span,
+.nav-link,
+.dropdown-panel a,
+.template-eyebrow,
+.template-text,
+.footer-heading,
+.footer-sub,
+.footer-bottom,
+.about-image-index,
+.about-heritage-card span:last-child,
+.about-image-label span,
+.about-eyebrow,
+.difference-eyebrow,
+.difference-index,
+.difference-section-label,
+.difference-link,
+.programs-eyebrow,
+.programs-view,
+.principal-eyebrow,
+.hero-eyebrow,
+.hero-meta small,
+.hero-controls button,
+.hero-slide-info small,
+.hero-location {
+  font-size: 16px !important;
+}
+
+.brand-kicker,
+.detail-label,
+.accreditation span,
+.accreditation strong,
+[class*='eyebrow'],
+[class*='label'],
+[class*='meta'],
+[class*='caption'],
+[class*='index'] {
+  font-size: 16px !important;
+}
+
+/* Restore the compact typography used by the navbar and hero only. */
+.site-header .utility-inner {
+  font-size: 10px !important;
+}
+
+.site-header .header-contact span {
+  font-size: 8px !important;
+}
+
+.site-header .nav-link {
+  font-size: 14px !important;
+}
+
+.site-header .chevron,
+.site-header .dropdown-panel a {
+  font-size: 13px !important;
+}
+
+.site-header .chevron,
+.site-header .dropdown-panel a b {
+  font-size: 12px !important;
+}
+
+.hero .hero-eyebrow {
+  font-size: 11px !important;
+}
+
+.hero .hero-content h2 {
+  font-size: 72px;
+}
+
+.hero .hero-content h3 {
+  font-size: 36px;
+}
+
+.hero .hero-content > p {
+  font-size: 14px !important;
+}
+
+.hero .hero-meta small,
+.hero .hero-slide-info small {
+  font-size: 9px !important;
+}
+
+.hero .hero-controls button {
+  font-size: 10px !important;
+}
+
+.hero .hero-location {
+  font-size: 8px !important;
+}
+
+@media (max-width: 1000px) {
+  .hero .hero-content h2 {
+    font-size: 64px;
+  }
+
+  .hero .hero-content h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header .nav-link {
+    font-size: 13px !important;
+  }
+
+  .hero .hero-content h2 {
+    font-size: 55px;
+  }
+
+  .hero .hero-content h3 {
+    font-size: 28px;
+  }
+
+  .hero .hero-content > p {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-header .utility-inner {
+    font-size: 8px !important;
+  }
+
+  .hero .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .hero .hero-content h3 {
+    font-size: 25px;
+  }
+
+  .hero .hero-content > p {
+    font-size: 12px !important;
+  }
+}
