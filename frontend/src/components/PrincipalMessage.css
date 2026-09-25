@@ -1,264 +1,165 @@
 .principal {
   background: #132D63;
   color: #FBF8F2;
-
   padding: 65px 8%;
-
   position: relative;
 }
-
 /* Main layout */
-
 .principal-inner {
   max-width: 1150px;
   margin: auto;
-
   display: flex;
   align-items: center;
-
   gap: 60px;
-
   position: relative;
 }
-
-
 /* Image */
-
 .principal-image {
   width: 190px;
   height: 230px;
-
   position: relative;
-
   flex-shrink: 0;
 }
-
 .principal-image img {
   width: 190px;
   height: 230px;
-
   object-fit: cover;
-
   border-radius: 10px;
-
   position: relative;
   z-index: 2;
 }
-
-
 /* Frame behind image */
-
 .image-frame {
   width: 190px;
   height: 230px;
-
   border: 1px solid #FBE4E1;
-
   border-radius: 10px;
-
   position: absolute;
-
   top: 10px;
   left: 10px;
 }
-
-
 /* Number */
-
 .image-number {
   position: absolute;
-
   bottom: -12px;
   left: -12px;
-
   background: #FBE4E1;
   color: #132D63;
-
   width: 35px;
   height: 35px;
-
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 11px;
   font-weight: bold;
-
   z-index: 3;
 }
-
-
 /* Content */
-
 .principal-content {
   max-width: 720px;
 }
-
 .principal-eyebrow {
   color: #FBE4E1;
-
   font-size: 12px;
   font-weight: bold;
-
   letter-spacing: 1.5px;
-
   margin: 0 0 14px;
 }
-
-
 /* Heading */
-
 .principal-content h2 {
   font-family: 'Fraunces', serif;
-
   font-size: 36px;
   font-weight: 400;
-
   line-height: 1.15;
-
   margin: 0 0 22px;
 }
-
 .principal-content h2 span {
   color: #FBE4E1;
   font-style: italic;
 }
-
-
 /* Quote */
-
 .quote-area {
   position: relative;
-
   padding-left: 30px;
-
   border-left: 1px solid #FBE4E1;
-
   margin-bottom: 20px;
 }
-
 .quote-mark {
   position: absolute;
-
   left: 8px;
   top: -25px;
-
   font-family: 'Fraunces', serif;
-
   font-size: 55px;
-
   color: rgba(251, 228, 225, 0.25);
 }
-
 .principal-quote {
   font-family: 'Fraunces', serif;
-
   font-size: 20px;
-
   line-height: 1.5;
-
   margin: 0;
-
   max-width: 680px;
 }
-
-
 /* Name */
-
 .principal-name {
   color: #FBE4E1;
-
   font-size: 12px;
-
   margin: 0 0 18px;
 }
-
-
 /* Link */
-
 .principal-link {
   color: #FBF8F2;
-
   text-decoration: none;
-
   font-size: 13px;
   font-weight: 600;
-
   border-bottom: 1px solid #FBE4E1;
-
   padding-bottom: 5px;
 }
-
 .principal-link span {
   margin-left: 8px;
 }
-
 .principal-link:hover {
   color: #FBE4E1;
 }
-
-
 /* Signature */
-
 .principal-signature {
   position: absolute;
-
   right: 0;
   bottom: -35px;
-
   font-family: 'Fraunces', serif;
-
   font-size: 14px;
-
   font-style: italic;
-
   color: #FBE4E1;
-
   text-align: right;
 }
-
 .principal-signature span {
   opacity: 0.7;
 }
-
-
 /* Mobile */
-
 @media (max-width: 700px) {
-
   .principal {
     padding: 50px 25px;
   }
-
   .principal-inner {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 35px;
   }
-
   .principal-image {
     width: 150px;
     height: 180px;
   }
-
   .principal-image img,
   .image-frame {
     width: 150px;
     height: 180px;
   }
-
   .principal-content h2 {
     font-size: 30px;
   }
-
   .principal-quote {
     font-size: 18px;
   }
-
   .principal-signature {
     display: none;
   }

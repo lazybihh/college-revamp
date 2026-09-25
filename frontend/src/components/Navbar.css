@@ -1,426 +1,269 @@
 .site-header {
   position: relative;
   z-index: 100;
-
   background: #f8f5ed;
-
   color: #102a52;
 }
-
-
-/* =========================
-   TOP BAR
-========================= */
-
+/* TOP BAR */
 .utility-bar {
   background: #0b1f3a;
   color: #ffffff;
 }
-
 .utility-inner {
   width: 94%;
   max-width: 1400px;
-
   min-height: 34px;
-
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
-
   font-size: 10px;
   font-weight: 600;
-
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 .utility-left,
 .utility-right {
   display: flex;
   align-items: center;
-
   gap: 14px;
 }
-
 .utility-left i {
   width: 4px;
   height: 4px;
-
   border-radius: 50%;
-
   background: #c9a45c;
 }
-
 .utility-right a {
   color: rgba(255, 255, 255, 0.8);
-
   text-decoration: none;
 }
-
 .utility-right a:hover {
   color: #d2a25d;
 }
-
-
-/* =========================
-   BRAND HEADER
-========================= */
-
+/* BRAND HEADER */
 .brand-header {
   width: 94%;
   max-width: 1400px;
-
   min-height: 105px;
-
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
-
 .college-brand {
   display: block;
-
   text-decoration: none;
 }
-
 .college-logo {
   display: block;
-
   width: 560px;
   max-width: 100%;
-
   height: auto;
 }
-
-
 /* RIGHT SIDE */
-
 .brand-right {
   display: flex;
   align-items: center;
-
   gap: 25px;
-
   flex-shrink: 0;
 }
-
 .header-contact {
   display: flex;
   flex-direction: column;
-
   gap: 5px;
 }
-
 .header-contact span {
   color: #8b806d;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
-
 .header-contact a {
   color: #102a52;
-
   font-size: 14px;
   font-weight: 700;
-
   text-decoration: none;
 }
-
 .header-line {
   width: 1px;
   height: 45px;
-
   background: #d9d3c7;
 }
-
 .naac-logo {
   width: 160px;
   height: auto;
-
   object-fit: contain;
 }
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION */
 .main-navigation {
   background: #0b1f3a;
-
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 3px solid #c9a45c;
 }
-
 .navigation-inner {
   width: 96%;
   max-width: 1400px;
-
   min-height: 55px;
-
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 2px;
 }
-
-
 /* NAV LINKS */
-
 .nav-link {
   min-height: 42px;
-
   padding: 0 12px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 6px;
-
   border: none;
   border-bottom: 2px solid transparent;
-
   background: transparent;
-
   color: rgba(255, 255, 255, 0.88);
-
   font-family: inherit;
-
   font-size: 14px;
   font-weight: 600;
-
   text-decoration: none;
-
   white-space: nowrap;
-
   cursor: pointer;
 }
-
 .nav-link:hover {
   color: #e2bd72;
-
   border-bottom-color: #e2bd72;
 }
-
-
 /* HOME */
-
 .nav-home {
   color: #e2bd72;
-
   border-bottom-color: #e2bd72;
 }
-
-
 /* DROPDOWN */
-
 .nav-dropdown {
   position: relative;
 }
-
 .chevron {
   color: #aeb8c7;
-
   font-size: 11px;
 }
-
 .nav-dropdown:hover .dropdown-panel,
 .nav-dropdown:focus-within .dropdown-panel {
   display: block;
 }
-
-
-/* =========================
-   DROPDOWN MENU
-========================= */
-
+/* DROPDOWN MENU */
 .dropdown-panel {
   position: absolute;
-
   top: 100%;
   left: 0;
-
   width: 245px;
-
   padding: 7px;
-
   background: #ffffff;
-
   border: 1px solid #e1ddd4;
-
   box-shadow: 0 12px 25px rgba(10, 30, 55, 0.15);
-
   display: none;
 }
-
 .dropdown-panel a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 10px;
-
   padding: 10px 11px;
-
   color: #263957;
-
   font-size: 13px;
-
   text-decoration: none;
 }
-
 .dropdown-panel a:hover {
   background: #f5f1e8;
-
   color: #102a52;
 }
-
 .dropdown-panel a b {
   color: #b0873f;
-
   font-size: 12px;
 }
-
-
-/* =========================
-   TABLET
-========================= */
-
+/* TABLET */
 @media (max-width: 1200px) {
-
   .brand-header {
     width: 92%;
   }
-
   .college-logo {
     width: 480px;
   }
-
   .naac-logo {
     width: 140px;
   }
-
   .navigation-inner {
     justify-content: flex-start;
-
     overflow-x: auto;
   }
-
   .navigation-inner::-webkit-scrollbar {
     display: none;
   }
-
   .nav-link {
     flex-shrink: 0;
   }
-
 }
-
-
-/* =========================
-   MOBILE
-========================= */
-
+/* MOBILE */
 @media (max-width: 750px) {
-
   .utility-inner {
     width: 92%;
   }
-
   .utility-left span:first-child {
     display: none;
   }
-
   .utility-left i {
     display: none;
   }
-
   .brand-header {
     width: 92%;
-
     min-height: 85px;
-
     gap: 15px;
   }
-
   .college-logo {
     width: 380px;
     max-width: 100%;
   }
-
   .header-contact,
   .header-line {
     display: none;
   }
-
   .naac-logo {
     width: 110px;
   }
-
   .navigation-inner {
     width: 100%;
-
     padding: 0 10px;
-
     justify-content: flex-start;
   }
-
   .nav-link {
     padding: 0 10px;
-
     font-size: 13px;
   }
-
 }
-
-
 /* SMALL MOBILE */
-
 @media (max-width: 500px) {
-
   .utility-inner {
     min-height: 30px;
-
     font-size: 8px;
   }
-
   .utility-right {
     gap: 10px;
   }
-
   .brand-header {
     min-height: 75px;
   }
-
   .college-logo {
     width: 100%;
   }
-
   .naac-logo {
     width: 80px;
   }
-
   .brand-right {
     gap: 8px;
   }
-
   .main-navigation {
     border-bottom-width: 2px;
   }
-
 }
