@@ -3,152 +3,258 @@ import "./Facilities.css";
 export default function Facilities() {
   return (
     <section className="facilities">
-
       <div className="facilities-content">
 
-        <p className="facilities-eyebrow">
-          CAMPUS & FACILITIES
-        </p>
+        <div className="facilities-header">
 
-        <h2>
-          Modern Infrastructure for
-          <br />
-          Holistic Development
-        </h2>
+          <div className="facilities-heading">
+            <p className="facilities-eyebrow">
+              CAMPUS & FACILITIES
+            </p>
 
-        <p className="facilities-sub">
-          We provide a vibrant campus with state-of-the-art
-          facilities to support academic, co-curricular and
-          personal growth.
-        </p>
+            <h2>
+              Spaces that support
+              <span> learning and growth.</span>
+            </h2>
 
-        <a href="/facilities" className="facilities-btn">
-          Explore All Facilities <span>→</span>
-        </a>
+            <p className="facilities-sub">
+              A thoughtfully equipped campus designed to support
+              academic learning, creativity, activity and student life.
+            </p>
+          </div>
+
+          <a
+            href="/facilities"
+            className="facilities-btn"
+          >
+            <span>Explore All Facilities</span>
+            <strong>↗</strong>
+          </a>
+
+        </div>
 
         <div className="facilities-grid">
 
-          {/* Library */}
-          <a href="/library-facility" className="facility-main">
-            <img
-              src="/images/library.jpg"
-              alt="Library"
-            />
+          {/* LIBRARY */}
 
-            <div className="facility-overlay">
-              <span className="facility-line"></span>
+          <a
+            href="/library-facility"
+            className="facility-feature"
+          >
+            <div className="facility-image">
 
-              <h3>Library</h3>
+              <img
+                src="/images/library.jpg"
+                alt="Library"
+              />
 
-              <p>
-                Knowledge, resources and a quiet space
-                to grow your ideas.
-              </p>
+              <div className="facility-image-overlay"></div>
 
-              <span className="facility-arrow">→</span>
+              <div className="facility-icon">
+                ⌑
+              </div>
+
+              <span className="facility-number">
+                01
+              </span>
+
+            </div>
+
+            <div className="facility-feature-content">
+
+              <div className="facility-feature-copy">
+
+                <span className="facility-line"></span>
+
+                <h3>Library</h3>
+
+                <p>
+                  Knowledge, resources and a quiet space
+                  to explore ideas and grow.
+                </p>
+
+              </div>
+
+              <span className="facility-link">
+                Learn More
+                <b>↗</b>
+              </span>
+
             </div>
           </a>
 
-          <div className="facility-list">
+          {/* SMALL FACILITIES */}
 
-            {/* Classrooms */}
+          <div className="facility-cards">
+
+            {/* CLASSROOMS */}
+
             <a
               href="/class-rooms"
               className="facility-card"
             >
-              <img
-                src="/images/classroom.jpg"
-                alt="Classrooms"
-              />
+              <div className="facility-card-image">
 
-              <div className="facility-overlay">
-                <span className="facility-line"></span>
+                <img
+                  src="/images/classroom.jpg"
+                  alt="Classrooms"
+                />
 
-                <h3>Classrooms</h3>
+                <div className="facility-image-overlay"></div>
 
-                <p>
-                  Spacious, well-equipped and conducive to learning.
-                </p>
+                <div className="facility-icon small">
+                  ◇
+                </div>
 
-                <span className="facility-arrow">→</span>
+              </div>
+
+              <div className="facility-card-content">
+
+                <div>
+                  <span className="facility-line"></span>
+
+                  <h3>Classrooms</h3>
+
+                  <p>
+                    Spacious, well-equipped spaces
+                    designed for meaningful learning.
+                  </p>
+                </div>
+
+                <span className="facility-circle">
+                  ↗
+                </span>
+
               </div>
             </a>
 
-            {/* Laboratories */}
+            {/* LABORATORIES */}
+
             <a
               href="/laboratories"
               className="facility-card"
             >
-              <img
-                src="/images/laboratory.jpg"
-                alt="Laboratories"
-              />
+              <div className="facility-card-image">
 
-              <div className="facility-overlay">
-                <span className="facility-line"></span>
+                <img
+                  src="/images/laboratory.jpg"
+                  alt="Laboratories"
+                />
 
-                <h3>Laboratories</h3>
+                <div className="facility-image-overlay"></div>
 
-                <p>
-                  Hands-on learning with modern technology.
-                </p>
+                <div className="facility-icon pink small">
+                  △
+                </div>
 
-                <span className="facility-arrow">→</span>
+              </div>
+
+              <div className="facility-card-content">
+
+                <div>
+                  <span className="facility-line"></span>
+
+                  <h3>Laboratories</h3>
+
+                  <p>
+                    Hands-on learning supported by
+                    practical resources and technology.
+                  </p>
+                </div>
+
+                <span className="facility-circle">
+                  ↗
+                </span>
+
               </div>
             </a>
 
-            {/* Sports */}
+            {/* SPORTS */}
+
             <a
               href="/sports-facilities"
               className="facility-card"
             >
-              <img
-                src="/images/sports.jpg"
-                alt="Sports"
-              />
+              <div className="facility-card-image">
 
-              <div className="facility-overlay">
-                <span className="facility-line"></span>
+                <img
+                  src="/images/sports.jpg"
+                  alt="Sports"
+                />
 
-                <h3>Sports</h3>
+                <div className="facility-image-overlay"></div>
 
-                <p>
-                  Stay active, stay healthy, stay inspired.
-                </p>
+                <div className="facility-icon small">
+                  ↗
+                </div>
 
-                <span className="facility-arrow">→</span>
+              </div>
+
+              <div className="facility-card-content">
+
+                <div>
+                  <span className="facility-line"></span>
+
+                  <h3>Sports</h3>
+
+                  <p>
+                    Spaces that encourage activity,
+                    wellbeing and team spirit.
+                  </p>
+                </div>
+
+                <span className="facility-circle">
+                  ↗
+                </span>
+
               </div>
             </a>
 
-            {/* Student Activities */}
+            {/* STUDENT ACTIVITIES */}
+
             <a
               href="/student-activities"
               className="facility-card"
             >
-              <img
-                src="/images/student-activities.jpg"
-                alt="Student Activities"
-              />
+              <div className="facility-card-image">
 
-              <div className="facility-overlay">
-                <span className="facility-line"></span>
+                <img
+                  src="/images/student-activities.jpg"
+                  alt="Student Activities"
+                />
 
-                <h3>Student Activities</h3>
+                <div className="facility-image-overlay"></div>
 
-                <p>
-                  Explore interests and build lifelong connections.
-                </p>
+                <div className="facility-icon pink small">
+                  +
+                </div>
 
-                <span className="facility-arrow">→</span>
+              </div>
+
+              <div className="facility-card-content">
+
+                <div>
+                  <span className="facility-line"></span>
+
+                  <h3>Student Activities</h3>
+
+                  <p>
+                    Opportunities to explore interests,
+                    skills and meaningful connections.
+                  </p>
+                </div>
+
+                <span className="facility-circle">
+                  ↗
+                </span>
+
               </div>
             </a>
 
           </div>
-
         </div>
 
       </div>
-
     </section>
   );
 }

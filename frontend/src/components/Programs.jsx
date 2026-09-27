@@ -1,115 +1,156 @@
-import './Programs.css';
+import "./Programs.css";
 
 export default function Programs() {
   return (
     <section className="programs">
+      <div className="programs-bg-shape programs-bg-one"></div>
+      <div className="programs-bg-shape programs-bg-two"></div>
+
       <div className="programs-container">
 
-        {/* Header */}
-        <div className="programs-header">
-          <div>
-            <p className="programs-eyebrow">
-              OUR PROGRAMMES
-            </p>
+        <div className="programs-heading">
+          <p className="programs-eyebrow">
+            <span></span>
+            OUR PROGRAMMES
+            <span></span>
+          </p>
 
-            <h2>Academic Programmes</h2>
+          <h2>
+            Academic <em>Programmes</em>
+          </h2>
 
-            <p className="programs-subtitle">
-              Nurturing future educators through quality teacher
-              education programmes.
-            </p>
-          </div>
+          <p className="programs-subtitle">
+            Nurturing future educators through quality teacher
+            education programmes.
+          </p>
 
           <a href="/courses-offered" className="programs-view">
-            View All Courses <span>→</span>
+            <span>View All Courses</span>
+            <strong>↗</strong>
           </a>
         </div>
 
-        {/* Programmes */}
-        <div className="programs-list">
+        <div className="programs-grid">
 
           {/* B.Ed. */}
-          <article className="program program-bed">
+          <article className="program-card program-bed">
 
-            <div className="program-number">
-              <span>01</span>
-              <i></i>
+            <div className="program-top">
+              <span className="program-number">01</span>
+
+              <span className="program-tag">
+                <b>●</b>
+                Shape Tomorrow
+              </span>
             </div>
 
-            <div className="program-image">
-              <img
-                src="/images/bed.jpg"
-                alt="B.Ed. programme"
-              />
+            <div className="program-image-wrap">
+              <div className="program-image">
+                <img
+                  src="/images/bed.jpg"
+                  alt="B.Ed. students"
+                />
+              </div>
             </div>
 
-            <div className="program-content">
-              <h3>B.Ed.</h3>
+            <div className="program-info">
+              <div className="program-icon">B</div>
 
-              <p className="program-meta">
-                BACHELOR OF EDUCATION
-                <span>·</span>
-                100 SEATS
-              </p>
+              <div className="program-details">
+                <h3>B.Ed.</h3>
 
-              <div className="program-line"></div>
+                <p className="program-meta">
+                  BACHELOR OF EDUCATION
+                  <span>•</span>
+                  <strong>100 SEATS</strong>
+                </p>
 
-              <p className="program-description">
-                Build a strong foundation in education theory,
-                practical teaching and classroom engagement.
-              </p>
+                <div className="program-rule"></div>
 
-              <a href="/courses-offered" className="program-link">
-                EXPLORE PROGRAMME <span>→</span>
-              </a>
+                <p className="program-description">
+                  Build a strong foundation in education theory,
+                  practical teaching and classroom engagement.
+                </p>
+
+                <a
+                  href="/courses-offered"
+                  className="program-link"
+                >
+                  <span>EXPLORE PROGRAMME</span>
+                  <strong>↗</strong>
+                </a>
+              </div>
             </div>
 
+            <span className="program-note">
+              Learn
+              <br />
+              Teach
+              <br />
+              Inspire
+            </span>
           </article>
 
           {/* M.Ed. */}
-          <article className="program program-med">
+          <article className="program-card program-med">
 
-            <div className="program-number">
-              <span>02</span>
-              <i></i>
+            <div className="program-top">
+              <span className="program-number">02</span>
+
+              <span className="program-tag">
+                <b>●</b>
+                Lead with Knowledge
+              </span>
             </div>
 
-            <div className="program-image">
-              <img
-                src="/images/med.jpg"
-                alt="M.Ed. programme"
-              />
+            <div className="program-image-wrap">
+              <div className="program-image">
+                <img
+                  src="/images/med.jpg"
+                  alt="M.Ed. students"
+                />
+              </div>
             </div>
 
-            <div className="program-content">
-              <h3>M.Ed.</h3>
+            <div className="program-info">
+              <div className="program-icon">M</div>
 
-              <p className="program-meta">
-                MASTER OF EDUCATION
-                <span>·</span>
-                50 SEATS
-              </p>
+              <div className="program-details">
+                <h3>M.Ed.</h3>
 
-              <div className="program-line"></div>
+                <p className="program-meta">
+                  MASTER OF EDUCATION
+                  <span>•</span>
+                  <strong>50 SEATS</strong>
+                </p>
 
-              <p className="program-description">
-                Deepen your expertise, enhance your research skills
-                and lead with confidence in the field of education.
-              </p>
+                <div className="program-rule"></div>
 
-              <a href="/courses-offered" className="program-link">
-                EXPLORE PROGRAMME <span>→</span>
-              </a>
+                <p className="program-description">
+                  Deepen your expertise, enhance your research skills
+                  and lead with confidence in education.
+                </p>
+
+                <a
+                  href="/courses-offered"
+                  className="program-link"
+                >
+                  <span>EXPLORE PROGRAMME</span>
+                  <strong>↗</strong>
+                </a>
+              </div>
             </div>
 
-            <div className="program-decoration">
-              <span></span>
-            </div>
-
+            <span className="program-note">
+              Think
+              <br />
+              Lead
+              <br />
+              Inspire
+            </span>
           </article>
 
         </div>
-
       </div>
     </section>
   );

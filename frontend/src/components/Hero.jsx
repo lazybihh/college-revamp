@@ -29,88 +29,76 @@ export default function Hero() {
 
   return (
     <section className="hero" aria-label="College highlights">
-
       <div className="hero-images">
-        <img
-          src={slides[active].image}
-          alt=""
-          className="active"
-        />
+        {slides.map((slide, index) => (
+          <img
+            key={slide.image}
+            src={slide.image}
+            alt={slide.label}
+            className={index === active ? "active" : ""}
+          />
+        ))}
       </div>
 
       <div className="hero-shade"></div>
 
       <div className="hero-content">
-
         <div className="hero-eyebrow">
           <span></span>
-          Chhotu Ram College of Education
+          Nurturing Minds
+          <i></i>
+          Building Futures
         </div>
 
-        <h2>
-          <span>Shaping</span>
-          <em>educators.</em>
-        </h2>
-
-        <h3>Inspiring generations.</h3>
+        <h1>
+          Shaping the
+          <br />
+          Educators
+          <br />
+          <em>of Tomorrow</em>
+        </h1>
 
         <p>
-          A tradition of teacher education in Rohtak, built on knowledge,
-          values and professional excellence since 1951.
+          At Chhotu Ram College of Education, we believe in nurturing
+          capable, compassionate and confident educators who can make
+          a real difference in society.
         </p>
 
-        <div className="hero-meta">
+        <div className="hero-buttons">
+          <a href="/about-us" className="hero-button primary">
+            Explore College
+            <span>→</span>
+          </a>
 
-          <div>
-            <strong>
-              69<span>+</span>
-            </strong>
-            <small>Years of legacy</small>
-          </div>
-
-          <div className="hero-meta-line"></div>
-
-          <div>
-            <strong>1951</strong>
-            <small>Established</small>
-          </div>
-
+          <a href="/courses-offered" className="hero-button secondary">
+            Our Courses
+            <span>→</span>
+          </a>
         </div>
-
       </div>
 
       <div className="hero-slide-info">
-        <span>0{active + 1}</span>
+        <span className="hero-slide-number">
+          0{active + 1}
+        </span>
+
         <i></i>
+
         <small>{slides[active].label}</small>
       </div>
 
       <div className="hero-controls">
-
-        <button
-          type="button"
-          className={active === 0 ? "active" : ""}
-          onClick={() => setActive(0)}
-        >
-          01
-        </button>
-
-        <button
-          type="button"
-          className={active === 1 ? "active" : ""}
-          onClick={() => setActive(1)}
-        >
-          02
-        </button>
-
-        <button
-          type="button"
-          className={active === 2 ? "active" : ""}
-          onClick={() => setActive(2)}
-        >
-          03
-        </button>
-
+        {slides.map((slide, index) => (
+          <button
+            key={slide.image}
+            type="button"
+            className={active === index ? "active" : ""}
+            onClick={() => setActive(index)}
+            aria-label={`Show slide ${index + 1}`}
+          >
+            <span>0{index + 1}</span>
+          </button>
+        ))}
       </div>
 
       <div className="hero-location">
@@ -118,6 +106,10 @@ export default function Hero() {
         <span>HARYANA</span>
       </div>
 
+      <div className="hero-scroll">
+        <span>SCROLL</span>
+        <i></i>
+      </div>
     </section>
   );
 }

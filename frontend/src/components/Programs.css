@@ -1,309 +1,667 @@
 .programs {
   position: relative;
   overflow: hidden;
-  padding: 68px 0 72px;
-  background: #fbf8f2;
-  color: #132d63;
+  padding: 10px 0 30px;
+  background: #faf7f1;
+  color: #174f3b;
 }
+
 .programs-container {
-  width: min(1180px, calc(100% - 70px));
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 91%);
   margin: 0 auto;
 }
-/* Header */
-.programs-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 30px;
-}
-.programs-eyebrow {
+
+/* =========================
+   HEADING
+========================= */
+
+.programs-heading {
   position: relative;
-  margin: 0 0 14px;
-  padding-left: 38px;
-  color: #b8793d;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  margin-bottom: 36px;
+  text-align: center;
 }
-.programs-eyebrow::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 27px;
+
+.programs-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: 0 0 11px;
+  color: #c32159;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.23em;
+}
+
+.programs-eyebrow span {
+  width: 22px;
   height: 1px;
-  background: #b8793d;
+  background: #c32159;
 }
-.programs-header h2 {
+
+.programs-heading h2 {
   margin: 0;
-  color: #132d63;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(40px, 5vw, 58px);
-  font-weight: 500;
+  color: #174f3b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.045em;
 }
+
+.programs-heading h2 em {
+  color: #c32159;
+  font-style: italic;
+}
+
 .programs-subtitle {
-  max-width: 430px;
-  margin: 14px 0 0;
-  color: #64738a;
-  font-size: 14px;
-  line-height: 1.7;
+  max-width: 420px;
+  margin: 10px auto 0;
+  color: #75817b;
+  font-size: 11px;
+  line-height: 1.65;
 }
+
+/* =========================
+   VIEW ALL COURSES BUTTON
+========================= */
+
 .programs-view {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  margin-bottom: 4px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #b8793d;
-  color: #132d63;
-  font-size: 13px;
+  gap: 10px;
+  padding: 10px 10px 10px 16px;
+  border: 1px solid #174f3b;
+  border-radius: 6px;
+  background: #174f3b;
+  color: #ffffff;
+  font-size: 10px;
   font-weight: 700;
   text-decoration: none;
-  white-space: nowrap;
   transition:
-    color 0.2s ease,
-    gap 0.2s ease;
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
-.programs-view span {
-  color: #b8793d;
-  font-size: 13px;
-}
-.programs-view:hover {
-  color: #b8793d;
-  gap: 13px;
-}
-/* Programme layout */
-.programs-list {
+
+.programs-view strong {
+  width: 25px;
+  height: 25px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
-/* Individual programme */
-.program {
+
+.programs-view:hover {
+  background: #c32159;
+  border-color: #c32159;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(195, 33, 89, 0.17);
+}
+
+.programs-view:hover strong {
+  background: #ffffff;
+  color: #c32159;
+  transform: translate(2px, -2px);
+}
+
+/* =========================
+   PROGRAMME GRID
+========================= */
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* =========================
+   PROGRAM CARD
+========================= */
+
+.program-card {
   position: relative;
+  min-width: 0;
+  padding: 0 15px 22px;
+  border: 1px solid rgba(23, 79, 59, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 32px rgba(23, 79, 59, 0.055);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
-.program-number {
+
+.program-bed {
+  border-radius: 25px 25px 25px 7px;
+}
+
+.program-med {
+  margin-top: 24px;
+  border-radius: 25px 25px 7px 25px;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(195, 33, 89, 0.2);
+  box-shadow: 0 18px 40px rgba(23, 79, 59, 0.09);
+}
+
+/* =========================
+   CARD TOP
+========================= */
+
+.program-top {
+  height: 45px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  margin-bottom: 10px;
-  color: #b8793d;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 16px;
 }
-.program-number i {
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: #b8793d;
+
+.program-number {
+  color: #174f3b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
 }
-/* Images */
+
+.program-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border: 1px solid rgba(195, 33, 89, 0.17);
+  border-radius: 20px;
+  background: #fffafc;
+  color: #6d7772;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.program-tag b {
+  color: #c32159;
+  font-size: 7px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.program-image-wrap {
+  position: relative;
+}
+
 .program-image {
   position: relative;
-  width: 100%;
-  height: 255px;
+  z-index: 2;
+  height: 200px;
   overflow: hidden;
-  background: #e7e0d4;
+  background: #dfe8df;
 }
+
+.program-bed .program-image {
+  border-radius: 14px 50px 14px 14px;
+}
+
+.program-med .program-image {
+  border-radius: 14px 14px 14px 50px;
+}
+
+.program-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 58%,
+    rgba(23, 79, 59, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
 .program-image img {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s ease;
 }
-.program:hover .program-image img {
-  transform: scale(1.025);
+
+.program-card:hover .program-image img {
+  transform: scale(1.035);
 }
-/* B.Ed. image */
-.program-bed .program-image {
-  border-top-right-radius: 80px;
+
+/* =========================
+   DECORATIVE IMAGE LINES
+========================= */
+
+.program-bed .program-image-wrap::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  bottom: -7px;
+  width: 58px;
+  height: 35px;
+  border-bottom: 1px solid rgba(195, 33, 89, 0.3);
+  border-left: 1px solid rgba(195, 33, 89, 0.3);
+  border-radius: 0 0 0 20px;
 }
-/* M.Ed. image */
-.program-med {
-  margin-top: 18px;
+
+.program-med .program-image-wrap::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  top: -7px;
+  width: 58px;
+  height: 35px;
+  border-top: 1px solid rgba(195, 33, 89, 0.3);
+  border-right: 1px solid rgba(195, 33, 89, 0.3);
+  border-radius: 0 20px 0 0;
 }
-.program-med .program-image {
-  height: 255px;
+
+/* =========================
+   PROGRAM INFORMATION
+========================= */
+
+.program-info {
+  display: flex;
+  gap: 13px;
+  padding: 17px 5px 0;
 }
-/* Content */
-.program-content {
-  padding-top: 17px;
+
+.program-icon {
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #c32159;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
 }
-.program-content h3 {
+
+.program-details {
+  min-width: 0;
+}
+
+.program-details h3 {
   margin: 0;
-  color: #132d63;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 36px;
-  font-weight: 500;
+  color: #174f3b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 400;
   line-height: 1;
 }
+
+/* =========================
+   PROGRAM META
+========================= */
+
 .program-meta {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin: 10px 0 0;
-  color: #7890a8;
-  font-size: 10px;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 7px 0 0;
+  color: #7b8580;
+  font-size: 7px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
 }
+
 .program-meta span {
-  color: #b8793d;
-  font-size: 11px;
+  color: #c32159;
 }
-.program-line {
-  width: 30px;
+
+.program-meta strong {
+  color: #c32159;
+  font-weight: 700;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.program-rule {
+  width: 27px;
   height: 1px;
-  margin: 17px 0 12px;
-  background: #b8793d;
+  margin: 12px 0 9px;
+  background: #c32159;
 }
+
 .program-description {
-  max-width: 400px;
+  max-width: 370px;
   margin: 0;
-  color: #68758a;
-  font-size: 13px;
-  line-height: 1.7;
+  color: #69766f;
+  font-size: 10px;
+  line-height: 1.65;
 }
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
 .program-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  color: #b8793d;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.17em;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 7px 9px 7px 11px;
+  border: 1px solid rgba(195, 33, 89, 0.25);
+  border-radius: 5px;
+  background: #fffafc;
+  color: #c32159;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
   text-decoration: none;
-  transition: gap 0.2s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
-.program-link span {
-  font-size: 14px;
+
+.program-link strong {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(195, 33, 89, 0.3);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
+
 .program-link:hover {
-  gap: 14px;
+  background: #c32159;
+  border-color: #c32159;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
-/* Small decoration beside M.Ed. */
-.program-decoration {
+
+.program-link:hover strong {
+  background: #ffffff;
+  color: #c32159;
+  transform: translate(2px, -2px);
+}
+
+/* =========================
+   CARD SIDE NOTE
+========================= */
+
+.program-note {
   position: absolute;
-  right: -18px;
-  top: 105px;
-  width: 18px;
-  height: 75px;
-  border: 1px solid rgba(184, 121, 61, 0.35);
+  right: -4px;
+  bottom: 22px;
+  color: rgba(195, 33, 89, 0.27);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9px;
+  font-style: italic;
+  line-height: 1.3;
+  transform: rotate(-8deg);
+}
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+.programs-bg-shape {
+  position: absolute;
   pointer-events: none;
 }
-.program-decoration span {
-  position: absolute;
-  right: -8px;
-  bottom: -20px;
-  width: 27px;
-  height: 42px;
-  background: rgba(184, 121, 61, 0.28);
+
+.programs-bg-one {
+  top: -105px;
+  left: -90px;
+  width: 260px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(195, 33, 89, 0.045);
+  transform: rotate(-20deg);
 }
-/* Subtle botanical decoration */
-.programs::before {
-  content: '';
-  position: absolute;
-  left: -30px;
-  bottom: -35px;
-  width: 120px;
-  height: 160px;
-  border: 1px solid rgba(184, 121, 61, 0.15);
-  border-radius: 70% 30% 70% 30%;
-  transform: rotate(-25deg);
-  pointer-events: none;
+
+.programs-bg-two {
+  right: -90px;
+  bottom: -100px;
+  width: 250px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(23, 79, 59, 0.045);
+  transform: rotate(25deg);
 }
-.programs::after {
-  content: '';
-  position: absolute;
-  right: 35px;
-  bottom: 45px;
-  width: 85px;
-  height: 1px;
-  background: rgba(184, 121, 61, 0.2);
-  transform: rotate(-12deg);
-  pointer-events: none;
-}
-/* Tablet */
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 850px) {
+  .programs {
+    padding: 58px 0 64px;
+  }
+
   .programs-container {
-    width: calc(100% - 50px);
+    width: 92%;
   }
-  .programs-list {
-    gap: 35px;
+
+  .programs-heading {
+    padding-right: 0;
+    margin-bottom: 34px;
   }
-  .program-image,
-  .program-med .program-image {
-    height: 225px;
+
+  .programs-view {
+    position: static;
+    margin-top: 17px;
   }
-  .program-bed .program-image {
-    border-top-right-radius: 55px;
+
+  .programs-grid {
+    gap: 20px;
+  }
+
+  .program-card {
+    padding: 0 12px 20px;
+  }
+
+  .program-image {
+    height: 180px;
+  }
+
+  .program-info {
+    gap: 10px;
+  }
+
+  .program-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .program-details h3 {
+    font-size: 24px;
+  }
+
+  .program-description {
+    font-size: 9px;
   }
 }
-/* Mobile */
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 650px) {
   .programs {
-    padding: 70px 0 80px;
+    padding: 55px 0 62px;
   }
-  .programs-container {
-    width: calc(100% - 36px);
+
+  .programs-heading {
+    margin-bottom: 30px;
   }
-  .programs-header {
-    display: block;
-    margin-bottom: 42px;
+
+  .programs-heading h2 {
+    font-size: 42px;
   }
-  .programs-header h2 {
-    font-size: 40px;
-  }
+
   .programs-subtitle {
-    max-width: 360px;
+    max-width: 340px;
   }
-  .programs-view {
-    margin-top: 22px;
-  }
-  .programs-list {
+
+  .programs-grid {
     grid-template-columns: 1fr;
-    gap: 55px;
+    max-width: 430px;
+    gap: 24px;
   }
+
   .program-med {
     margin-top: 0;
   }
-  .program-image,
-  .program-med .program-image {
-    height: 270px;
+
+  .program-image {
+    height: 210px;
   }
+
   .program-bed .program-image {
-    border-top-right-radius: 60px;
+    border-radius: 14px 55px 14px 14px;
   }
-  .program-decoration {
-    right: -8px;
+
+  .program-med .program-image {
+    border-radius: 14px 14px 14px 55px;
+  }
+
+  .program-description {
+    max-width: 390px;
+    font-size: 9px;
+  }
+
+  .program-note {
+    right: 10px;
   }
 }
-/* Small phones */
-@media (max-width: 420px) {
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
   .programs {
-    padding: 60px 0 70px;
+    padding: 50px 0 58px;
   }
+
   .programs-container {
-    width: calc(100% - 28px);
+    width: 91%;
   }
-  .programs-header h2 {
-    font-size: 35px;
+
+  .programs-eyebrow {
+    font-size: 8px;
   }
-  .program-image,
-  .program-med .program-image {
-    height: 235px;
+
+  .programs-heading h2 {
+    font-size: 37px;
   }
-  .program-bed .program-image {
-    border-top-right-radius: 45px;
+
+  .programs-subtitle {
+    max-width: 310px;
+    font-size: 10px;
   }
-  .program-content h3 {
-    font-size: 29px;
+
+  .programs-view {
+    padding: 9px 9px 9px 13px;
+    font-size: 9px;
+  }
+
+  .programs-view strong {
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+  }
+
+  .program-card {
+    padding: 0 10px 18px;
+  }
+
+  .program-top {
+    height: 42px;
+  }
+
+  .program-tag {
+    padding: 5px 7px;
+    font-size: 6px;
+  }
+
+  .program-image {
+    height: 190px;
+  }
+
+  .program-info {
+    padding-top: 14px;
+    gap: 9px;
+  }
+
+  .program-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 11px;
+  }
+
+  .program-details h3 {
+    font-size: 23px;
+  }
+
+  .program-meta {
+    font-size: 6.5px;
+    letter-spacing: 0.1em;
+  }
+
+  .program-description {
+    font-size: 8.5px;
+  }
+
+  .program-link {
+    margin-top: 12px;
+    font-size: 6.5px;
+  }
+
+  .program-note {
+    display: none;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .programs-heading h2 {
+    font-size: 34px;
+  }
+
+  .program-image {
+    height: 175px;
+  }
+
+  .program-description {
+    font-size: 8px;
   }
 }
