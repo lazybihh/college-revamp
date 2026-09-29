@@ -356,6 +356,27 @@
   .nav-link {
     flex-shrink: 0;
   }
+
+  .nav-dropdown:nth-child(n + 6) .dropdown-panel {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (max-width: 760px) and (min-width: 601px) {
+  .college-logo {
+    width: min(360px, 58vw);
+  }
+
+  .navigation-inner {
+    justify-content: flex-start;
+    gap: 0;
+    padding-inline: 12px;
+  }
+
+  .nav-link {
+    padding-inline: 10px;
+  }
 }
 
 /* MOBILE */

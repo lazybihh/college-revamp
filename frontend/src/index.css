@@ -26,9 +26,12 @@ body {
   line-height: 1.7;
   letter-spacing: -0.01em;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
+img, svg, video, canvas { max-width: 100%; }
+img { display: block; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: anywhere; }
 p, li, span, strong, small, button, input, textarea { line-height: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 /* Keep compact labels readable across every route and shared component. */
@@ -198,5 +201,15 @@ small {
   }
   .hero .hero-content > p {
     font-size: 12px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero .hero-content h2 {
+    font-size: 42px;
+  }
+
+  .hero .hero-content h3 {
+    font-size: 23px;
   }
 }

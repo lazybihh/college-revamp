@@ -1102,6 +1102,11 @@
     gap: 40px;
   }
 
+  .inner-main {
+    padding-top: 38px;
+    padding-bottom: 52px;
+  }
+
   .inner-sidebar {
     position: static;
   }
@@ -1179,6 +1184,10 @@
     grid-column: 2;
     margin-top: 4px;
   }
+
+  .map-placeholder {
+    min-height: 340px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1217,6 +1226,10 @@
 
   .inner-hero h1 {
     font-size: 36px;
+  }
+
+  .inner-hero-content > p {
+    font-size: 11px;
   }
 
   .inner-content-header h2 {
@@ -1267,6 +1280,24 @@
 
   .document-actions {
     flex-wrap: wrap;
+  }
+
+  .document-view,
+  .document-download {
+    flex: 1 1 110px;
+  }
+
+  .map-placeholder {
+    min-height: 290px;
+  }
+
+  .map-placeholder-content {
+    width: calc(100% - 32px);
+    padding: 28px 20px;
+  }
+
+  .map-placeholder-content h3 {
+    font-size: 23px;
   }
 }
 
